@@ -1,14 +1,14 @@
 CREATE TABLE Socio (
     NIF char (9) PRIMARY KEY, 
-    Nombre VARCHAR(55) not null,
-    Apellido1 VARCHAR(55) not null,
-    Apellido2 VARCHAR(55),
-    Dirección Text(55) not null,
+    Nombre VARCHAR(50) not null,
+    Apellido1 VARCHAR(50) not null,
+    Apellido2 VARCHAR(50),
+    Dirección VARCHAR(20) not null,
     Piso VARCHAR(25) not null,
-    Código_Postal VARCHAR(50) not null,
-    Municipio Text(55) not null,
-    Provincia Text(55) not null,
-    Telefono VARCHAR(30),
+    Código_Postal Char(5) not null,
+    Municipio VARCHAR(55) not null,
+    Provincia VARCHAR(55) not null,
+    Telefono VARCHAR(16),
     Correo_Electrónico VARCHAR(55)
 );
 
@@ -17,10 +17,10 @@ CREATE TABLE Entrega (
     Municipio Text(55) not null,
     Fecha_Hora_Entrega DATETIME not null,
     Número_Socio VARCHAR(25) not null,
-    Cantidad_Aceituna DECIMAL(64,9) not null,
+    Cantidad_Aceituna VARCHAR(65) not null,
     Tipo_Aceite VARCHAR(55) not null,
-    Parcela VARCHAR(55) not null,
-    Recinto VARCHAR(55) not null,
+    Parcela int(55) not null,
+    Recinto int(55) not null,
                 FOREIGN KEY (Número_Socio) 
                     REFERENCES Socio(NIF) 
                     ON DELETE CASCADE

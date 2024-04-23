@@ -1,3 +1,7 @@
+Drop database if exists BaseCoope;
+Create database BaseCoope;
+use BaseCoope;
+
 CREATE TABLE Socio (
     NIF char (9) PRIMARY KEY, 
     Nombre VARCHAR(50) not null,
@@ -21,6 +25,7 @@ CREATE TABLE Entrega (
     Tipo_Aceite VARCHAR(55) not null,
     Parcela int(55) not null,
     Recinto int(55) not null,
+    Producto
                 FOREIGN KEY (Número_Socio) 
                     REFERENCES Socio(NIF) 
                     ON DELETE CASCADE

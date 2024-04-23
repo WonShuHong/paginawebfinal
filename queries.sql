@@ -25,6 +25,7 @@ CREATE TABLE Entrega (
     Tipo_Aceite VARCHAR(55) not null,
     Parcela int(55) not null,
     Recinto int(55) not null,
+
                 FOREIGN KEY (Número_Socio) 
                     REFERENCES Socio(NIF) 
                     ON DELETE CASCADE
@@ -36,5 +37,7 @@ CREATE TABLE Ventas (
     Número_Socio VARCHAR(25) not null,
                 FOREIGN KEY (Número_Socio) 
                     REFERENCES Socio(NIF) 
-                    ON DELETE CASCADE
+);
+Create TABLE Producto (
+
 );

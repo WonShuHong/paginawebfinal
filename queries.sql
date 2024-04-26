@@ -16,6 +16,8 @@ CREATE TABLE Socio (
     Correo_Electrónico VARCHAR(55)
 );
 
+INSERT INTO Socio VALUES('1111111A','Carlos','Manzano',);
+
 CREATE TABLE Entrega (
     N_Entrega INT AUTO_INCREMENT PRIMARY KEY,
     Municipio Text(55) not null,
@@ -38,6 +40,18 @@ CREATE TABLE Ventas (
                 FOREIGN KEY (Número_Socio) 
                     REFERENCES Socio(NIF) 
 );
-Create TABLE Producto (
-
+CREATE TABLE Producto (
+    ID_DE_Producto INT AUTO_INCREMENT PRIMARY KEY,
+    Cantidad_Aceitunas INT,
+    Precio litros Float(),
+);
+CREATE TABLE VENTA_PRODUCTO(
+    N_Factura INT,
+    FOREIGN KEY (N_Factura),
+    REFERENCES VENTA (N_Factura),
+    ID_DE_Producto INT,
+    cantidad INT,
+    FOREIGN KEY (ID_DE_Producto),
+    REFERENCES Producto (ID_DE_Producto),
+    CONSTRAINT VENTA_PRODUCTO PRIMARY KEY(N_Factura,ID_DE_Producto)
 );

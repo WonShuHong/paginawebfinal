@@ -6,23 +6,26 @@
 	<link rel="stylesheet" href="../CSS/styles.css" />
 </head>
 
-
+<body>
 
 <ul>
    <p>
-    <disable for="Numero de entrega">Numero de entrega:</disable>
+
+    <form> 
+    <label for="Numero de entrega">Numero de entrega:</label>
    <disable name="Numero de entrega" id="Numero de entrega"></disable>
    <input type="text" id="lname" name="lname" disabled>
    </p>
 
    <p>
-    <label for="Municipio">Municipio:</label>
-   <input name="Municipio" id="Municipio">
+    <label for="Municipio">Municipio</label>
+   <input type="text" name="Municipio" id="Municipio" minlength="2" maxlength="55">
    </p>
   
   
    <p> 
-   <label for="meeting-time">Fecha y hora de la entrega:</label>
+   <label for="meeting-time">Fecha y hora de la entrega: </label> 
+   <required title="Por favor, selecciona una hora">
 
 <input
   type="datetime-local"
@@ -36,11 +39,11 @@
 
 <p>
     <label for="Numero de socio">Numero de socio:</label>
-   <input name="Numero de socio" id="Numero de socio">
+   <input name="Numero de socio" id="Numero de socio" minlength="2" maxlength="55">
 </p>
 <p>
     <label for="Cantidad de aceituna">Cantidad de aceituna:</label>
-   <input name="Cantidad de aceituna" id="Cantidad de aceituna">
+   <input name="Cantidad de aceituna" id="Cantidad de aceituna"minlength="2" maxlength="55">
 </p>
 
 <p>
@@ -49,7 +52,7 @@
     <select>
         <option>Arbol</option>
         <option>Suelo</option>
-    </select>
+    </select></body>
    </label>
 
 </p>
@@ -67,3 +70,5 @@
 <p>
    <input type="submit">
   </p>
+</form>
+</body>

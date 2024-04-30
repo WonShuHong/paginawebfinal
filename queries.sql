@@ -16,11 +16,10 @@ CREATE TABLE Socio (
     Correo_Electrónico VARCHAR(55)
 );
 
-INSERT INTO Socio VALUES('1111111A','Carlos','Manzano',);
+INSERT INTO Socio VALUES('1111111A','Carlos','Manzano','Hong','Maestro_Bartolome',4,'23003','Albacete','Comunidad Valenciana',958374854,'C*******@gmail.com');
 
 CREATE TABLE Entrega (
     N_Entrega INT AUTO_INCREMENT PRIMARY KEY,
-    Municipio Text(55) not null,
     Fecha_Hora_Entrega DATETIME not null,
     Número_Socio VARCHAR(25) not null,
     Cantidad_Aceituna VARCHAR(65) not null,
@@ -33,6 +32,8 @@ CREATE TABLE Entrega (
                     ON DELETE CASCADE
 );
 
+INSERT INTO Entrega VALUES(null,2024-03-12 19:30,234234234,'45kg','Arbol',4,4);
+
 CREATE TABLE Ventas (
     N_Factura INT AUTO_INCREMENT PRIMARY KEY,
     Fecha_Hora_Venta DATETIME not null,
@@ -40,18 +41,22 @@ CREATE TABLE Ventas (
                 FOREIGN KEY (Número_Socio) 
                     REFERENCES Socio(NIF) 
 );
+
+INSERT INTO ventas VALUES(NULL,'58L');
 CREATE TABLE Producto (
     ID_DE_Producto INT AUTO_INCREMENT PRIMARY KEY,
-    Cantidad_Aceitunas INT,
     Precio litros Float(),
 );
 CREATE TABLE VENTA_PRODUCTO(
     N_Factura INT,
-    FOREIGN KEY (N_Factura),
-    REFERENCES VENTA (N_Factura),
     ID_DE_Producto INT,
     cantidad INT,
     FOREIGN KEY (ID_DE_Producto),
     REFERENCES Producto (ID_DE_Producto),
-    CONSTRAINT VENTA_PRODUCTO PRIMARY KEY(N_Factura,ID_DE_Producto)
+    CONSTRAINT VENTA_PRODUCTO PRIMARY KEY(N_Factura,ID_DE_Producto),
+    CONSTRAINT vent_Fact_fk FOREIGN KEY (N_Factura)
+            REFERENCES VENTA (N_Factura) ON UPDATE CASCADE ON DELETE NO ACTION
+    CONSTRAINT vent_Fact_fk FOREIGN KEY (ID_DE_Producto)
+            REFERENCES VENTA (ID_DE_Producto) ON UPDATE CASCADE ON DELETE NO ACTION
 );
+INSERT INTO ventas VALUES(NULL,null,46);

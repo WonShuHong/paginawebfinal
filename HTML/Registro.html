@@ -12,6 +12,7 @@
 
 
 <body>
+<form>
 <h1>REGISTRO DE SOCIOS</h1>
 <ol>
     
@@ -19,16 +20,16 @@
 
     <p>
         <label for="NIF">NIF:</label>
-       <input name="NIF" id="NIF">
+       <input name="NIF" id="NIF"minlength="9" maxlength="9" required />
     </p>
 
     <p>
         <label for="Nombre">Nombre:</label>
-       <input name="Nombre" id="Nombre">
+       <input name="Nombre" id="Nombre"minlength="2" maxlength="55"required />
     </p>
     <p>
         <label for="Apellido1">Apellido 1:</label>
-       <input name="Apellido1" id="Apellido1">
+       <input name="Apellido1" id="Apellido1"minlength="2" maxlength="55"required />
     </p>
     <p>
         <label for="Apellido2">Apellido2:</label>
@@ -38,7 +39,7 @@
     <h4>Direcci?n</h4>
     <p>
         <label for="Numero">Numero:</label>
-       <input name="Numero" id="Numero">
+       <input name="Numero" id="Numero"minlength="2" maxlength="55" required />
     </p>
     <p>
         <label for="Piso">Piso:</label>
@@ -46,11 +47,11 @@
     </p>
     <p>
         <label for="Codigo postal">Codigo postal:</label>
-       <input name="Codigo postal" id="Codigo postal">
+       <input name="Codigo postal" id="Codigo postal"required />
     </p>
     <p>
         <label for="Municipio">Municipio:</label>
-       <input name="Municipio" id="Municipio">
+       <input name="Municipio" id="Municipio"required />
     </p>
 
     <h4>Provincia</h4>
@@ -73,18 +74,18 @@ Provincia:
 
     <p>
         <label for="Telefono">Telefono:</label>
-       <input name="Telefono" id="Telefono">
+       <input name="Telefono" id="Telefono"required />
     </p>
     <p>
         <label for="Correo electronico">Correo electronico:</label>
-       <input name="Correo electronico" id="Correo electronico">
+       <input name="Correo electronico" id="Correo electronico"required>
     </p>
 
 </ol>
 
 
 <p>
-    <input type="submit">
+    <input type="submit" value="Enviar">
   </p>
-
+</form>
 </body>

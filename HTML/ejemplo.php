@@ -15,7 +15,7 @@
        die("Connection failed: " . mysqli_connect_error());
     }
     
-    
+    $sentenciaSQL="INSERT INTO Entregas VALUES(null,2024-03-12 19:30,234234234,'45kg','Arbol',4,4)";
 
     mysqli_close($conn);
 ?>

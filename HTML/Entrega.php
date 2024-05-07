@@ -2,7 +2,7 @@
    
    $nombreServidor = "localhost";
    $baseDatos = "Ejemplo";
-   $nombreUsuario = "paginawebfinal";
+   $nombreUsuario = "Usuario";
    $password = "Usuario";
    
    // Se crea la conexión

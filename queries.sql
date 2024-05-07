@@ -32,7 +32,7 @@ CREATE TABLE Entrega (
                     ON DELETE CASCADE
 );
 
-INSERT INTO Entrega VALUES(null,2024-03-12 19:30,234234234,'45kg','Arbol',4,4);
+INSERT INTO Entrega VALUES(null,'2024-03-12 19:30','234234234',45,'Arbol',4,4);
 
 CREATE TABLE Ventas (
     N_Factura INT AUTO_INCREMENT PRIMARY KEY,

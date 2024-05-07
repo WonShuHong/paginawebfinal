@@ -1,8 +1,8 @@
 <?php
    
    $nombreServidor = "localhost";
-   $baseDatos = "Ejemplo";
-   $nombreUsuario = "paginawebfinal";
+   $baseDatos = "BaseCoope";
+   $nombreUsuario = "Usuario";
    $password = "Usuario";
    
    // Se crea la conexión
@@ -18,7 +18,7 @@
 
  // $sentenciaSQL="INSERT INTO Localidad VALUES(3,'Córdoba')";
 
-    $sentenciaSQL="INSERT INTO Entregas VALUES(null,2024-03-12 19:30,234234234,'45kg','Arbol',4,4)";
+    $sentenciaSQL="INSERT INTO Entrega VALUES(null,'2024-03-12 19:30','234234234',45,'Arbol',4,4)";
     if (!$conn->query($sentenciaSQL)) {
       
       echo "Falló la inserción de datos en la tabla: (" . $conn->errno . ") " . $conn->error;
